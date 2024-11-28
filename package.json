@@ -1,0 +1,22 @@
+{
+  "name": "fauth02-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently npm:firebase vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "firebase": "firebase emulators:start --only auth,firestore,hosting --import=./offline-seed --export-on-exit --project fauthchat"
+  },
+  "dependencies": {
+    "firebase": "^11.0.2",
+    "preact": "^10.25.0",
+    "preact-iso": "^2.8.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.1",
+    "concurrently": "^9.1.0",
+    "vite": "^6.0.1"
+  }
+}
